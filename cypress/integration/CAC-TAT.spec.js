@@ -80,7 +80,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
     })
 
     it('seleciona um produto (Blog) por seu índice', function() {
-        cy.get('#product').select(2).should('have.value', 'blog')
+        cy.get('#product').select(1).should('have.value', 'blog')
     })
 
     it('marca o tipo de atendimento "Feedback"', function() {
@@ -98,7 +98,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         cy.get('input[type="checkbox"]').check().should('be.checked').last().uncheck().should('not.be.checked')
     })
 
-    it.only('exibe mensagem de erro quando o telefone se torna obrigatório mas não é preenchido antes do envio do formulário', function() {
+    it('exibe mensagem de erro quando o telefone se torna obrigatório mas não é preenchido antes do envio do formulário', function() {
         cy.get('input[id="firstName"]').type('Sabrynna')
         cy.get('input[id="lastName"]').type('Lourenço')
         cy.get('input[type="email"]').type('limasabrynna@gmail.com')
@@ -107,6 +107,25 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         cy.contains('button', 'Enviar').click()
 
         cy.get('.error').should('be.visible')
+    })
+
+    it('seleciona um arquivo da pasta fixtures', function() {
+        cy.get('input[type="file"]').should('not.have.value').selectFile('./cypress/fixtures/example.json').should(function($input) {
+            expect($input[0].files[0].name).to.equal('example.json')
+        })
+    })
+
+    it('seleciona um arquivo simulando um drag-and-drop', function() {
+        cy.get('input[type="file"]').should('not.have.value').selectFile('./cypress/fixtures/example.json', { action: 'drag-drop' }).should(function($input) {
+            expect($input[0].files[0].name).to.equal('example.json')
+        })
+    })
+
+    it('seleciona um arquivo utilizando uma fixture para a qual foi dada um alias', function() {
+        cy.fixture('example.json').as('sampleFile')
+        cy.get('input[type="file"]').selectFile('@sampleFile').should(function($input) {
+            expect($input[0].files[0].name).to.equal('example.json')
+        })
     })
 })
 
