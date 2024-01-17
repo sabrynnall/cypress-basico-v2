@@ -1,29 +1,66 @@
-# Testes automatizados com Cypress - Básico
 
-👋 Seja bem-vindo(a)!
+<p align="center">
+  <img alt="cypress" src="https://media.licdn.com/dms/image/D4D12AQGoFi4cMbApzQ/article-cover_image-shrink_720_1280/0/1691404661944?e=2147483647&v=beta&t=sOa1js9lZj2HWfEmEDMO4u0LT_1s1mYRIRrI2YOgG9Q" width="150px">
+  
+<h1 align="center">Testes automatizados com Cypress</h1>
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai adorar este curso. ❤️
+## 🚨 Pré-requisitos: 
 
-## O que você vai aprender
+- Node JS
 
-Durante o curso de testes automatizados com Cypress (básico), você vai aprender:
+  ```sh
+  https://nodejs.org/en/
+  ```
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar _upload_ de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como executar os testes em um _pipeline_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
+- Npm ou Yarn
 
-## Vamos começar?
+  ```sh
+  https://www.npmjs.com/
+  ```
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+---
 
-___
+## ⌨️ Instalação
 
-Este é mais um curso da [**Escola Talking About Testing**](https://udemy.com/user/walmyr).
+<b> Clone o projeto do github </b>
+
+- `npm install`
+
+---
+
+## 💻 Testes
+
+<b> Você pode rodar os testes simulando desktop ou mobile viewport. </b>
+
+<b> Desktop </b>
+
+- `npm run test` em modo headless.
+- `npm run cy:open` para abrir o Cypress em modo interativo.
+
+<b> Mobile </b>
+
+- `npm run test:mobile` em modo headless.
+- `npm run cy:open:mobile` para abrir o Cypress em modo interativo.
+
+---
+
+## ✅  Conteúdos
+
+✅  Localizando, digitando e clicando em elementos.
+
+✅  Selecionando opções em campos de seleção suspensa.
+
+✅  Marcando inputs do tipo radio.
+
+✅  Marcando e desmarcando inputs do tipo checkbox.
+
+✅  Fazendo upload de arquivos .
+
+✅  Lidando com links que abrem em outra aba do navegador.
+
+✅  Simulando as dimensões de um dispositivo móvel.
+
+---
+
+## 📱 Contatos
+Sabrynna Lourenço - [Linkedin](https://www.linkedin.com/in/sabrynna-lourenco/) - [Instagram](https://www.instagram.com/sabrynna.ln/) - limasabrynna03@gmail.com
